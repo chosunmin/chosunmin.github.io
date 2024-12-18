@@ -18,8 +18,7 @@ nav ul li {
 }
 
 nav ul {
-  margin:2em 0;
-  text-align: left;
+  margin:2em 0 4em 0;
 }
 
 .submenu {
@@ -47,10 +46,6 @@ nav ul {
 
 .submenu.open {
   max-height: 500px; 
-}
-
-.sidebar-sticky {
-  text-align: left;
 }
 
 .sidebar-about>a.sidebar-title>h2 {
