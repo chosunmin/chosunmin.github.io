@@ -55,7 +55,18 @@ menu:
       - title: 2019-2023
         url: /portfolio/2019-2023/
       - title: 2016-2018
-        url: /portfolio/2016-2018/
+        url: /portfolio/2016-2018/    
+  - title: Soliloquy
+    url: /soliloquy/
+    submenus: # 하위 메뉴 추가
+      - title: html
+        url: /soliloquy/html/
+      - title: css
+        url: /soliloquy/css/
+      - title: jquery
+      url: /soliloquy/jquery/
+      - title: javascript
+      url: /soliloquy/javascript/      
   - title: About
     url: /about/
 
