@@ -24,8 +24,7 @@ title: Chodesigner
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  자주 잊어버리는 나를 위한 번거로운 메모지
 
 # A shorter description for the sidebar.
 tagline: 웹디자인 + 퍼블리싱 + 개...발?
@@ -36,13 +35,13 @@ keywords: []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo: /assets/img/logo.png
+logo: assets/blog/me.svg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name: <firstname> <lastname>
-  email: <mail@domain.tld>
+  name: Cho sunmin
+  email: <lllvvv10@gmail.com>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -95,7 +94,7 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
-accent_image: /assets/blog/me.svg
+accent_image: assets/blog/me.svg
 accent_color: rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
