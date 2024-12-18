@@ -1,12 +1,12 @@
 <ul>
   {% if site.menu %}
     {% for node in site.menu %}
-      <li>
+      <li class="{% if node.submenus %}has-submenu{% endif %}">
         <a href="{% include_cached smart-url url=node.url %}">
           {{ node.name | default:node.title }}
         </a>
         {% if node.submenus %}
-          <ul>
+          <ul class="submenu">
             {% for subnode in node.submenus %}
               <li>
                 <a href="{% include_cached smart-url url=subnode.url %}">
