@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // 상위 메뉴 클릭 이벤트 추가
-  document.querySelectorAll('.has-submenu > a').forEach(function (menuLink) {
-    menuLink.addEventListener('click', function (event) {
-      event.preventDefault(); // 기본 링크 동작 방지
-      const submenu = this.nextElementSibling;
+  // 서브메뉴 토글 버튼 클릭 이벤트
+  document.querySelectorAll('.submenu-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      const submenu = this.nextElementSibling; // 바로 다음 형제 요소가 서브메뉴
+      const isOpen = submenu.style.maxHeight;
 
-      // 서브메뉴 토글
-      if (submenu.classList.contains('open')) {
-        submenu.classList.remove('open'); // 슬라이드 업
+      // 서브메뉴 열기/닫기
+      if (isOpen) {
+        submenu.style.maxHeight = null; // 슬라이드 업
       } else {
-        document.querySelectorAll('.submenu.open').forEach(function (openSubmenu) {
-          openSubmenu.classList.remove('open'); // 다른 열린 서브메뉴 닫기
-        });
-        submenu.classList.add('open'); // 슬라이드 다운
+        submenu.style.maxHeight = submenu.scrollHeight + "px"; // 슬라이드 다운
       }
     });
   });
