@@ -15,32 +15,26 @@ nav ul li a {
   display: block;
 }
 
-/* 서브메뉴 기본 설정 */
 .submenu {
   max-height: 0;
   overflow: hidden;
   left: 0;
-  transition: max-height 0.3s ease; /* 부드러운 애니메이션 */
+  transition: max-height 0.3s ease;
   z-index: 10;
   padding: 0;
   margin: 0;
 }
 
-/* 서브메뉴 항목 */
-.submenu li {
-  padding: 10px;
-}
-
 .submenu li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 
 /* 서브메뉴 토글 버튼 */
 .submenu-toggle {
   cursor: pointer;
   padding-left: 5px;
-  color: #333;
+  color: #fff;
 }
 
 /* 활성화된 서브메뉴 */
