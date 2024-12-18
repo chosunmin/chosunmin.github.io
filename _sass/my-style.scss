@@ -19,10 +19,6 @@ a {
 /* 서브메뉴 숨김 */
 .submenu {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
   margin: 0;
   padding: 0;
 }
