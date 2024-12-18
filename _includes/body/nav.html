@@ -3,8 +3,8 @@
     {% for node in site.menu %}
       <li class="{% if node.submenus %}has-submenu{% endif %}">
         {% if node.submenus %}
-            <span class="submenu-toggle">▼</span> 
-          {% endif %}
+          <span class="submenu-toggle">▼</span> 
+        {% endif %}
         <a href="{% include_cached smart-url url=node.url %}">
           {{ node.name | default:node.title }}
         </a>
