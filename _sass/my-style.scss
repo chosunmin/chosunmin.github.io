@@ -1,3 +1,4 @@
+/* 기본 메뉴 스타일 */
 nav ul {
   list-style: none;
   padding: 0;
@@ -6,19 +7,45 @@ nav ul {
 
 nav li {
   position: relative;
-  display: inline-block;
 }
 
-nav ul ul {
+nav li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* 서브메뉴 기본 숨김 */
+.submenu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
   z-index: 1000;
 }
 
-nav li:hover > ul {
+/* 서브메뉴 항목 스타일 */
+.submenu li a {
+  padding: 10px 15px;
+  color: #333;
   display: block;
+}
+
+/* 애니메이션 효과를 위해 트랜지션 추가 */
+.submenu {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* 서브메뉴 활성화 상태 */
+.submenu.open {
+  display: block;
+  max-height: 500px; /* 충분히 큰 값으로 설정 */
+  opacity: 1;
 }
