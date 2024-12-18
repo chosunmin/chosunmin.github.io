@@ -49,3 +49,29 @@ nav ul {
   max-height: 500px; 
 }
 
+.sidebar-sticky {
+  text-align: left;
+}
+
+.sidebar-about>a.sidebar-title>h2 {
+  font-size: 1.5rem;
+}
+
+.sidebar-about>a.sidebar-title::after {
+  width:0;
+  margin:0;
+}
+
+.sidebar-about p {
+  font-size:0.7rem;
+  color:rgba(255,255,255,.5);
+}
+
+.sidebar-social>ul>li>a {
+  font-size: 1.4rem;
+  width: 100%;
+  height: auto;
+  padding: 0 1em 0 0;
+  line-height: 0;
+  border-bottom-width: 0;
+}
