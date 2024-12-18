@@ -27,18 +27,18 @@ nav ul li a {
 
 .submenu li a {
   text-decoration: none;
+  display:inline-block;
   color: #fff;
 }
 
-/* 서브메뉴 토글 버튼 */
 .submenu-toggle {
+  display:inline-block;
   cursor: pointer;
   padding-left: 5px;
   color: #fff;
 }
 
-/* 활성화된 서브메뉴 */
 .submenu.open {
-  max-height: 500px; /* 적절한 크기 설정 */
+  max-height: 500px; 
 }
 
