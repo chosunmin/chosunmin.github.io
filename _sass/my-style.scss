@@ -19,30 +19,36 @@ nav ul li a {
 .submenu {
   max-height: 0;
   overflow: hidden;
+  position: absolute; /* 부모 메뉴 기준 위치 */
+  top: 100%; /* 상위 메뉴 아래로 배치 */
+  left: 0;
   transition: max-height 0.3s ease; /* 부드러운 애니메이션 */
+  z-index: 10;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /* 서브메뉴 항목 */
 .submenu li {
-  list-style: none;
+  padding: 10px;
 }
 
 .submenu li a {
-  display: block;
-  padding: 10px;
   text-decoration: none;
   color: #333;
 }
 
-.submenu li a:hover {
-  background-color: #f5f5f5;
-}
-
-/* 서브메뉴 토글 버튼 스타일 */
+/* 서브메뉴 토글 버튼 */
 .submenu-toggle {
   cursor: pointer;
-  padding: 5px;
-  font-size: 14px;
-  color: #ffffff;
-  margin-left: 5px;
+  padding-left: 5px;
+  color: #333;
 }
+
+/* 활성화된 서브메뉴 */
+.submenu.open {
+  max-height: 500px; /* 적절한 크기 설정 */
+}
+
