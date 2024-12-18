@@ -19,15 +19,11 @@ nav ul li a {
 .submenu {
   max-height: 0;
   overflow: hidden;
-  position: absolute; /* 부모 메뉴 기준 위치 */
-  top: 100%; /* 상위 메뉴 아래로 배치 */
   left: 0;
   transition: max-height 0.3s ease; /* 부드러운 애니메이션 */
   z-index: 10;
-  background-color: white;
   padding: 0;
   margin: 0;
-  list-style: none;
 }
 
 /* 서브메뉴 항목 */
