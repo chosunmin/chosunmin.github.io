@@ -64,7 +64,7 @@ menu:
       - title: css
         url: /soliloquy/css/
       - title: jquery
-      url: /soliloquy/jquery/
+        url: /soliloquy/jquery/
       - title: javascript
       url: /soliloquy/javascript/      
   - title: About
