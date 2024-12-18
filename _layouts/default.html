@@ -23,7 +23,7 @@ layout: base
   <header>
     <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
     {% include body/nav.html %}
-    {% include assets/js/sidebar-folder %}
+    {% include js/sidebar-folder %}
     {% include sass/my-style %}
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
