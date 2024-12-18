@@ -54,9 +54,9 @@ menu:
     url: /portfolio/
     submenus: # 하위 메뉴 추가
       - title: 2019-2023
-        url: /2019-2023/
+        url: /portfolio/2019-2023/
       - title: 2016-2018
-        url: /2016-2018/
+        url: /portfolio/2016-2018/
   - title: About
     url: /about/
 
