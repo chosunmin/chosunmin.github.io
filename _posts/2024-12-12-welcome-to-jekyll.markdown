@@ -2,7 +2,7 @@
 layout: post
 title:  "test로 작성해봅니다"
 date:   2024-12-12 10:40:50 +0900
-categories: About
+categories: jekyll update
 - #리액트  
 - #반응형  
 - #HTML5  
