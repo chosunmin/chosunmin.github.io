@@ -88,3 +88,51 @@ nav ul {
   line-height: 0;
   border-bottom-width: 0;
 }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.tag-react {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+.tag-responsive {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tag-html5 {
+  background-color: #e34f26;
+  color: white;
+}
+
+.tag-css3 {
+  background-color: #2965f1;
+  color: white;
+}
+
+.tag-javascript {
+  background-color: #f7df1e;
+  color: #000;
+}

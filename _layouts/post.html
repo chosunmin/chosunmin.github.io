@@ -41,14 +41,9 @@ layout: base
 {% endfor %}
 
 {% if page.tags %}
-  <p>Tags:
+  <div class="tags">
     {% for tag in page.tags %}
-      <a 
-        href="/tags/{{ tag | slugify }}/" 
-        class="tag-{{ tag | slugify }}"
-      >
-        #{{ tag }}
-      </a>
+      <span class="tag tag-{{ tag | slugify }}">#{{ tag }}</span>
     {% endfor %}
-  </p>
+  </div>
 {% endif %}
