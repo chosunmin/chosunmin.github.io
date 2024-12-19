@@ -46,4 +46,7 @@ layout: base
       <span class="tag tag-{{ tag | slugify }}">#{{ tag }}</span>
     {% endfor %}
   </div>
+{% else %}
+  <p>No tags found for this post.</p>
+  <pre>{{ page | inspect }}</pre>
 {% endif %}
