@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-layout: default
+layout: base
 ---
 
 {% assign version = jekyll.version | split:'.' %}
@@ -46,8 +46,4 @@ layout: default
       <span class="tag tag-{{ tag | slugify }}">#{{ tag }}</span>
     {% endfor %}
   </div>
-{% else %}
-  <p>No tags found for this post.</p>
-  <pre>{{ page | inspect }}</pre>
 {% endif %}
-<h1 style="color: red;">This is post.html</h1>
