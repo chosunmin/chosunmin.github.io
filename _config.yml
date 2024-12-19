@@ -183,6 +183,11 @@ defaults:
     values:
       seo:
         type: WebPage
+  - scope:
+      path: "" # 모든 경로에 적용
+      type: "posts" # 게시물 타입에만 적용
+    values:
+      layout: post
 
 kramdown:
   math_engine: katex
