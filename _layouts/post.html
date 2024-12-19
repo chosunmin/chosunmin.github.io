@@ -39,3 +39,16 @@ layout: base
   {% else %}
   {% endcase %}
 {% endfor %}
+
+{% if page.tags %}
+  <p>Tags:
+    {% for tag in page.tags %}
+      <a 
+        href="/tags/{{ tag | slugify }}/" 
+        class="tag-{{ tag | slugify }}"
+      >
+        #{{ tag }}
+      </a>
+    {% endfor %}
+  </p>
+{% endif %}
