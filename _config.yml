@@ -24,13 +24,13 @@ title: Chodesigner
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description: >
-  자주 잊어버리는 나를 위한 번거로운 메모지
+  자주 잊어버리는 나를 위한 메모지
 
 # A shorter description for the sidebar.
 tagline: 디블리셔 [디자인 + 퍼블리싱]
 
 # A list of keywords for your blog
-keywords: []
+keywords: [웹디자인, 퍼블리싱, html, css, scss]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -72,19 +72,19 @@ menu:
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-legal:
-  - title: LICENSE
-    url: /LICENSE/
-  - title: NOTICE
-    url: /NOTICE/
-  - title: CHANGELOG
-    url: /CHANGELOG/
+# legal:
+#   - title: LICENSE
+#     url: /LICENSE/
+#   - title: NOTICE
+#     url: /NOTICE/
+#   - title: CHANGELOG
+#     url: /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright: © 2024. All rights reserved.
 
 # Format of the permalinks
-permalink: /:categories/:year-:month-:day-:title/
+# permalink: /:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate: 10
