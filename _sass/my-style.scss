@@ -49,9 +49,15 @@ nav ul {
   color: #fff;
 }
 
-.submenu-toggle::before {
+.submenu-toggle::after {
   content:'▼';
-  font-size:12px;
+  font-size:10px;
+  color:#fff;
+}
+
+.submenu_open::after {
+  content:'▲';
+  font-size:10px;
   color:#fff;
 }
 

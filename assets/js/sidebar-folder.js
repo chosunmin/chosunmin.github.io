@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
       // 서브메뉴 토글
       if (isOpen) {
         submenu.style.maxHeight = null; // 닫기
+        this.classList.remove('submenu_open');
       } else {
         document.querySelectorAll('.submenu').forEach(function (openSubmenu) {
           openSubmenu.style.maxHeight = null; // 다른 서브메뉴 닫기
         });
+        document.querySelectorAll('.submenu-toggle').forEach(function (toggle) {
+          toggle.classList.remove('submenu_open'); // 모든 'open' 클래스 제거
+        });
         submenu.style.maxHeight = submenu.scrollHeight + "px"; // 열기
+        this.classList.add('submenu_open');
       }
     });
   });
