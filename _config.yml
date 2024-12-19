@@ -27,7 +27,7 @@ description: >
   자주 잊어버리는 나를 위한 번거로운 메모지
 
 # A shorter description for the sidebar.
-tagline: 웹디자인 + 퍼블리싱 + 개...발?
+tagline: 디블리셔 [디자인 + 퍼블리싱]
 
 # A list of keywords for your blog
 keywords: []
@@ -105,13 +105,13 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
-accent_image: /assets/img/blog/me.jpg
-accent_color: #21215d
+accent_image: /assets/img/blog/background.jpg
+accent_color: rgb(33,33,93)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color: #21215d
+theme_color: rgb(33,33,93)
 
 # IMPORTANT:
 # As of Hydejack 9.2, Google Fonts are turned off by default due to a stronger focus on privacy.
