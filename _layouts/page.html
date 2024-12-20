@@ -20,6 +20,9 @@ layout: base
 <article class="page mb6" role="article">
   <header>
     <h1 class="page-title">{{ page.title }}</h1>
+    <p>디버깅: {{ page.title }}</p>
+<p>디버깅 (현재 템플릿): {{ layout }}</p>
+<p>태그 데이터: {% for post in posts %}{{ post.tags | inspect }}{% endfor %}</p>
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
 
