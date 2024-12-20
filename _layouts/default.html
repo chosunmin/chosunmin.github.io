@@ -48,10 +48,10 @@ layout: base
             {% endfor %}
           </div>
           {% else %}
-          <div class="tags">
-            <span class="tag">No tags available</span>
-          </div>
-          <pre>Tag: {{ tag }} | Slugified: {{ tag | slugify }}</pre>
+          <pre>
+            Tag: {{ tag }}
+            Slugified Tag: {{ tag | slugify }}
+            </pre>
         {% endif %}
       </li>
     {% endfor %}
