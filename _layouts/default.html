@@ -35,8 +35,7 @@ layout: base
   {% if site.posts.size > 0 %}
     <h2 class="hr-bottom">{{ strings.posts | default:"Posts" }}</h2>
     <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-
+      
         {% for post in site.posts %}
           <div>
             Title: {{ post.title }}  
@@ -44,8 +43,7 @@ layout: base
               {{ tag }} (class: tag-{{ tag | slugify }})  
             {% endfor %}
           </div>
-        {% endfor %}
-        
+
       {% endfor %}
     </ul>
   {% endif %}
