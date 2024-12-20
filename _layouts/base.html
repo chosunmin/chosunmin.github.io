@@ -32,4 +32,10 @@ layout: compress
 <body class="{% include_cached base-classes %}">
   {% include body/index.html %}
   {{ content }}
+  <p>디버깅: {{ page.title }}</p>
+<p>디버깅 (현재 템플릿): {{ layout }}</p>
+<p>포스트 데이터:</p>
+{% for post in site.posts %}
+  <p>{{ post.title }} - 태그: {{ post.tags | inspect }}</p>
+{% endfor %}
 </body>
