@@ -1,24 +1,3 @@
----
-# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-layout: page
----
-
-{{ content }}
-
 {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
 
 {% assign date_formats  = site.data.strings.date_formats               %}
@@ -35,6 +14,17 @@ layout: page
     <ul class="related-posts">
     {% assign prev_date = current_date %}
   {% endif %}{% endunless %}
-  {% include_cached components/post-list-item.html post=post format=list_entry %}
+  <article>
+    <h3>{{ post.title }}</h3>
+    {% if post.tags %}
+      <div class="tags">
+        {% for tag in post.tags %}
+          <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>태그가 없습니다.</p>
+    {% endif %}
+  </article>
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
