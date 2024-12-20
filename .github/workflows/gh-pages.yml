@@ -30,3 +30,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+
+      - name: Debug workspace
+        run: ls -la && ls -la hydejack-theme
