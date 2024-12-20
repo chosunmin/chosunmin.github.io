@@ -23,8 +23,6 @@ layout: base
 {% assign patch = version[2] | plus:0 %}
 
 {% include components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
-
-{% include components/dingbat.html %}
 {% if page.tags %}
   <div class="tags">
     {% for tag in page.tags %}
@@ -32,6 +30,7 @@ layout: base
     {% endfor %}
   </div>
 {% endif %}
+{% include components/dingbat.html %}
 {% assign addons = page.addons | default:site.hydejack.post_addons %}
 {% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
 {% for addon in addons %}
