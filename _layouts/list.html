@@ -16,7 +16,14 @@
 
 layout: page
 ---
-
+{% for post in site.posts %}
+  <div>
+    Title: {{ post.title }}  
+    Tags: {% for tag in post.tags %}  
+      {{ tag }} (class: tag-{{ tag | slugify }})  
+    {% endfor %}
+  </div>
+{% endfor %}
 {{ content }}
 
 {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
@@ -32,9 +39,9 @@ layout: page
   {% unless page.no_groups %}{% if current_date != prev_date %}
     {% unless forloop.first %}</ul>{% endunless %}
     <h2 id="{{ list_group_by | slugify }}-{{ current_date | slugify }}" class="hr-bottom">{{ current_date }}</h2>
-    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
     <ul class="related-posts">
     {% assign prev_date = current_date %}
   {% endif %}{% endunless %}
+  {% include_cached components/post-list-item.html post=post format=list_entry %}
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
