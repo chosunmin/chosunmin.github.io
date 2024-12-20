@@ -16,14 +16,7 @@
 
 layout: page
 ---
-{% for post in site.posts %}
-  <div>
-    Title: {{ post.title }}  
-    Tags: {% for tag in post.tags %}  
-      {{ tag }} (class: tag-{{ tag | slugify }})  
-    {% endfor %}
-  </div>
-{% endfor %}
+
 {{ content }}
 
 {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}

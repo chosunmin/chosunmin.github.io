@@ -22,7 +22,14 @@ layout: base
     <h1 class="page-title">{{ page.title }}</h1>
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
-
+  {% for post in site.posts %}
+  <div>
+    Title: {{ post.title }}  
+    Tags: {% for tag in post.tags %}  
+      {{ tag }} (class: tag-{{ tag | slugify }})  
+    {% endfor %}
+  </div>
+{% endfor %}
   {{ content }}
 </article>
 
