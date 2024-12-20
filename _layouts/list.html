@@ -7,11 +7,11 @@
 {% assign prev_date = 0 %}
 {% if page.no_groups %}<ul class="related-posts">{% endif %}
 {% for post in posts %}
+<p>현재 포스트: {{ post.title }}</p>
+  <p>태그 데이터: {{ post.tags | inspect }}</p>
   {% assign current_date = post.date | date:list_group_by %}
   {% unless page.no_groups %}{% if current_date != prev_date %}
     {% unless forloop.first %}</ul>{% endunless %}
-    <p>현재 포스트: {{ post.title }}</p>
-  <p>태그 데이터: {{ post.tags | inspect }}</p>
     <h2 id="{{ list_group_by | slugify }}-{{ current_date | slugify }}" class="hr-bottom">{{ current_date }}</h2>
     <ul class="related-posts">
     {% assign prev_date = current_date %}
