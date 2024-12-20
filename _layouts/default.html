@@ -47,6 +47,11 @@ layout: base
               <span class="tag tag-{{ tag | slugify }}">#{{ tag }}</span>
             {% endfor %}
           </div>
+          {% else %}
+          <div class="tags">
+            <span class="tag">No tags available</span>
+          </div>
+          <pre>Tag: {{ tag }} | Slugified: {{ tag | slugify }}</pre>
         {% endif %}
       </li>
     {% endfor %}
