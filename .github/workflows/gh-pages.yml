@@ -35,12 +35,12 @@ jobs:
         run: bundle install
 
       # Debug: List contents of the workspace to confirm `hydejack-theme` is present
-      - name: Debug workspace
+      - name: Verify theme directory
         run: |
-          echo "Checking directories:"
-          ls -la
-          echo "Checking theme directory:"
-          ls -la ./hydejack-theme || echo "hydejack-theme not found!"
+          if [ ! -d "./hydejack-theme" ]; then
+            echo "Error: hydejack-theme directory is missing!";
+            exit 1;
+          fi
 
       # Build the Jekyll site
       - name: Build site
