@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
   s.summary     = "Hydejack theme for Jekyll"
   s.license     = "MIT"
 
-  s.files       = Dir["**/*"]
-  s.require_paths = ["_layouts", "_includes", "_sass", "assets"]
+  s.files       = Dir["**/*"].reject { |file| file.end_with?(".gem") }
+  s.require_paths = ["."]
 end

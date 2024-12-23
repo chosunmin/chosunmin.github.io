@@ -9,6 +9,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.3"
+gem "bundler", "~> 2.6"
 gem "jekyll-theme-hydejack", path: "./hydejack-theme"
 # If you are part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers), 
 # you can fetch the theme from a private repository. 
@@ -57,6 +58,7 @@ group :jekyll_plugins do
   gem "jekyll-compose"
 end
 
+gem "wdm", "~> 0.1.1", platforms: [:mswin, :mingw, :x64_mingw]
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
 
