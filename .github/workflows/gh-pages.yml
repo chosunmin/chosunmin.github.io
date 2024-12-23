@@ -10,15 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Set up Ruby environment
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
           bundler-cache: true
 
+      # Cache Ruby gems
       - name: Cache gems
         uses: actions/cache@v3
         with:
@@ -27,19 +30,23 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
+      # Install dependencies
       - name: Install dependencies
         run: bundle install
 
+      # Debug: List contents of the workspace to confirm `hydejack-theme` is present
       - name: Debug workspace
         run: |
           echo "Checking directories:"
           ls -la
           echo "Checking theme directory:"
-          ls -la hydejack-theme || echo "hydejack-theme not found!"
+          ls -la ./hydejack-theme || echo "hydejack-theme not found!"
 
+      # Build the Jekyll site
       - name: Build site
         run: bundle exec jekyll build
 
+      # Deploy the built site to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
