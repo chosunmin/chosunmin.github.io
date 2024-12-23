@@ -18,7 +18,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.0
           bundler-cache: true
 
       # Debugging environment
@@ -45,6 +45,11 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: bundle install
+
+      - name: Check theme directory
+        run: |
+          echo "Verifying theme directory..."
+          ls -la ./hydejack-theme
 
       # Verify theme directory
       - name: Verify theme directory
