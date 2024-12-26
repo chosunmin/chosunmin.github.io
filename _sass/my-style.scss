@@ -112,50 +112,38 @@ nav ul {
   color: #fff;
 }
 
-.tag_react {
-  background-color: #61dafb;
-  color: #20232a;
-  padding:4px 10px 5px 10px;
-  border-radius: 25px;
-  font-size:14px;
-}
-
-.tag_responsive {
-  background-color: #4caf50;
-  color: white;
-  padding:4px 10px 5px 10px;
-  border-radius: 25px;
-  font-size:14px;
-}
-
-.tag_html5 {
-  background-color: #e34f26;
-  color: white;
-  padding:4px 10px 5px 10px;
-  border-radius: 25px;
-  font-size:14px;
-}
-
-.tag_css3 {
-  background-color: #2965f1;
-  color: white;
-  padding:4px 10px 5px 10px;
-  border-radius: 25px;
-  font-size:14px;
-}
-
-.tag_javascript {
-  background-color: #f7df1e;
-  color: #000;
-  padding:4px 10px 5px 10px;
-  border-radius: 25px;
-  font-size:14px;
-}
-
-.ellipsis span {
+.ellipsis [class^="tag_"] {
   margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
 
-.ellipsis span:last-of-type {
+.ellipsis [class^="tag_"]:last-of-type {
   margin-right:0;
+}
+
+.tag_react {
+  background-color: #DBF5FF;
+}
+
+.tag_hardCoding {
+  background-color: #DBFFF5;
+}
+
+.tag_gnuboard {
+  background-color: #ECE8FF;
+}
+
+.tag_cafe24 {
+  background-color: #FFFADB;
+}
+
+.tag_nexacro {
+  background-color: #FFE6F5;
+}
+
+.tag_javascript, .tag_html5, .tag_css3, .tag_jQuery, .tag_scss {
+  background:#f6f6f6;
 }
