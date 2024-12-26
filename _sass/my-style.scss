@@ -151,3 +151,11 @@ nav ul {
   border-radius: 25px;
   font-size:14px;
 }
+
+.ellipsis span {
+  margin-right:0.5em;
+}
+
+.ellipsis span:last-of-type {
+  margin-right:0;
+}
