@@ -9,7 +9,7 @@
 {%- if tags.size > 0 -%}
   {%- assign content = start_with -%}
   {%- for tag_slug in tags -%}
-    {%- capture iter_separator -%}{% if forloop.last %}{{ end_with }}{% else %}{{ separator }}{% endif %}{%- endcapture -%}
+    {%- capture iter_separator -%}{% if forloop.last %}{{ end_with }}{% else %} {{ separator }} {% endif %}{%- endcapture -%}
 
     {%- if major >= 4 and minor >= 1 %}
       {%- assign tag = meta | find: "slug", tag_slug -%}
