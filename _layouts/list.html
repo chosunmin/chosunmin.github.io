@@ -39,7 +39,7 @@ layout: page
   <div>
     Title: {{ post.title }}  
     Tags: {% for tag in post.tags %}  
-      {{ tag }} (class: tag-{{ tag | slugify }})  
+      {{ tag }} (class: tag-{{ tag | slugify }}) {% endunless %}
     {% endfor %}
   </div>
 {% endfor %}
