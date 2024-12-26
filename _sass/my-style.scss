@@ -112,7 +112,12 @@ nav ul {
   color: #fff;
 }
 
-.ellipsis [class^="tag_"] {
+.ellipsis [class^="tag_"]:last-of-type {
+  margin-right:0;
+}
+
+.tag_react {
+  background-color: #DBF5FF;
   margin-right:0.5em;
   padding:4px 10px 5px 10px;
   border-radius: 25px;
@@ -120,30 +125,47 @@ nav ul {
   color:#212121;
 }
 
-.ellipsis [class^="tag_"]:last-of-type {
-  margin-right:0;
-}
-
-.tag_react {
-  background-color: #DBF5FF;
-}
-
 .tag_hardCoding {
   background-color: #DBFFF5;
+  margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
 
 .tag_gnuboard {
   background-color: #ECE8FF;
+  margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
 
 .tag_cafe24 {
   background-color: #FFFADB;
+  margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
 
 .tag_nexacro {
   background-color: #FFE6F5;
+  margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
 
 .tag_javascript, .tag_html5, .tag_css3, .tag_jQuery, .tag_scss {
   background:#f6f6f6;
+  margin-right:0.5em;
+  padding:4px 10px 5px 10px;
+  border-radius: 25px;
+  font-size:14px;
+  color:#212121;
 }
