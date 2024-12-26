@@ -38,8 +38,8 @@ layout: page
   {% for post in site.posts %}
   <div>
     Title: {{ post.title }}  
-    Tags: {% for tag in post.tags %}  
-      <span class="tag-{{ tag | slugify }}">{{ tag }}</span>{% unless forloop.last %} {% endunless %}
+    Tags: {% for tag in post.tags %}
+    <span class="tag-{{ tag | slugify }}">{{ tag }}</span>{% if forloop.last == false %} {% endif %}
     {% endfor %}
   </div>
 {% endfor %}
