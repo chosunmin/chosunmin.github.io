@@ -9,18 +9,18 @@ html {
   --theme-color: {{ theme_color }};
 
   {% if site.github and site.hydejack.dart_sass_2_compat != true %}
-  --dark-mode-body-bg: #{hsl(color.channel($color: {{ theme_color }}, "hue", $space: hsl), 
-                              color.channel($color: {{ theme_color }}, "saturation", $space: hsl) / 8, 
-                              17.5%)};
-  --dark-mode-border-color: #{hsl(color.channel($color: {{ theme_color }}, "hue", $space: hsl), 
-                                   color.channel($color: {{ theme_color }}, "saturation", $space: hsl) / 8, 
-                                   22.5%)};
+  --dark-mode-body-bg: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
+                              $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
+                              $lightness: 17.5%)};
+  --dark-mode-border-color: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
+                                   $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
+                                   $lightness: 22.5%)};
   {% else %}
-  --dark-mode-body-bg: #{hsl(color.channel($color: {{ theme_color }}, "hue", $space: hsl), 
-                              color.channel($color: {{ theme_color }}, "saturation", $space: hsl) / 8, 
-                              17.5%)};
-  --dark-mode-border-color: #{hsl(color.channel($color: {{ theme_color }}, "hue", $space: hsl), 
-                                   color.channel($color: {{ theme_color }}, "saturation", $space: hsl) / 8, 
-                                   22.5%)};
+  --dark-mode-body-bg: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
+                              $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
+                              $lightness: 17.5%)};
+  --dark-mode-border-color: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
+                                   $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
+                                   $lightness: 22.5%)};
   {% endif %}
 }
