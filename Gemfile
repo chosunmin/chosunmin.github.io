@@ -39,6 +39,8 @@ gem "webrick"
 
 # Uncomment when using the `--lsi` option for `jekyll build`
 # gem "classifier-reborn"
+gem "csv"
+gem "logger"
 
 group :jekyll_plugins do
   gem "jekyll-default-layout"
