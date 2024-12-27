@@ -1,21 +1,18 @@
-@use "sass:color";
-@use "sass:math";
+// Sass 변수로 Liquid 데이터를 먼저 처리
+$theme-color: {{ theme_color }};
+$adjusted-color: #ffcc00; // Replace this with your actual color logic
 
 html {
-  --accent-color: #21215d;
-  --accent-color-faded: #{color.adjust($color: #21215d, $alpha: -0.5)};
-  --accent-color-highlight: #{color.adjust($color: #21215d, $alpha: -0.9)};
-  --accent-color-darkened: #{color.adjust($color: #21215d, $lightness: -7.5%)};
-  --theme-color: #ffcc00;
+  --accent-color: #{$theme-color};
+  --accent-color-faded: #{fade-out($adjusted-color, 0.5)};
+  --accent-color-highlight: #{fade-out($adjusted-color, 0.9)};
+  --accent-color-darkened: #{darken($adjusted-color, 7.5%)};
 
-  --dark-mode-body-bg: #{color.hsl(
-    $hue: color.hue(#ffcc00),
-    $saturation: math.div(color.saturation(#ffcc00), 8),
-    $lightness: 17.5%
-  )};
-  --dark-mode-border-color: #{color.hsl(
-    $hue: color.hue(#ffcc00),
-    $saturation: math.div(color.saturation(#ffcc00), 8),
-    $lightness: 22.5%
-  )};
+  {% if site.github and site.hydejack.dart_sass_2_compat != true %}
+  --dark-mode-body-bg: hsl(#{hue($theme-color)}, #{saturation($theme-color) / 8}%, 17.5%);
+  --dark-mode-border-color: hsl(#{hue($theme-color)}, #{saturation($theme-color) / 8}%, 22.5%);
+  {% else %}
+  --dark-mode-body-bg: hsl(#{hue($theme-color)}, #{saturation($theme-color) / 8}%, 17.5%);
+  --dark-mode-border-color: hsl(#{hue($theme-color)}, #{saturation($theme-color) / 8}%, 22.5%);
+  {% endif %}
 }

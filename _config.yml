@@ -408,6 +408,8 @@ compress_html:
 
 sass:
   style: compressed
+  sass_dir: _sass
+  css_dir: assets/css
 
 # Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------
