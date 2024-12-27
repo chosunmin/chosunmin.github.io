@@ -21,6 +21,12 @@ jobs:
 
       - name: Remove Frozen Mode
         run: bundle config set --local frozen false
+      - name: Install Required Gems
+        run: |
+          echo "gem 'csv'" >> Gemfile
+          echo "gem 'base64'" >> Gemfile
+          echo "gem 'logger'" >> Gemfile
+          bundle install
 
       - name: Install Gems
         run: bundle install

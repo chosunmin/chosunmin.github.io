@@ -40,6 +40,7 @@ gem "webrick"
 # Uncomment when using the `--lsi` option for `jekyll build`
 # gem "classifier-reborn"
 gem "csv"
+gem "base64"
 gem "logger"
 
 group :jekyll_plugins do

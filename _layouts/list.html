@@ -6,7 +6,7 @@ layout: page
 
 {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
 
-{% assign date_formats  = site.data.strings.date_formats | default: {} %}
+{% assign date_formats  = site.data.strings.date_formats | default: "{}" %}
 {% assign list_group_by = date_formats.list_group_by | default:"%Y" %}
 {% assign list_entry    = date_formats.list_entry | default:"%d %b" %}
 
