@@ -1,26 +1,21 @@
-{% assign color       = include.color %}
-{% assign theme_color = include.theme_color %}
+@use "sass:color";
+@use "sass:math";
 
 html {
-  --accent-color: {{ color }};
-  --accent-color-faded: #{color.adjust($color: rgb(33,33,93), $alpha: -0.5)};
-  --accent-color-highlight: #{color.adjust($color: {{ color }}, $alpha: -0.9)};
-  --accent-color-darkened: #{color.adjust($color: rgb(33,33,93), $lightness: -7.5%)};
-  --theme-color: {{ theme_color }};
+  --accent-color: #21215d;
+  --accent-color-faded: #{color.adjust($color: #21215d, $alpha: -0.5)};
+  --accent-color-highlight: #{color.adjust($color: #21215d, $alpha: -0.9)};
+  --accent-color-darkened: #{color.adjust($color: #21215d, $lightness: -7.5%)};
+  --theme-color: #ffcc00;
 
-  {% if site.github and site.hydejack.dart_sass_2_compat != true %}
-  --dark-mode-body-bg: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
-                              $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
-                              $lightness: 17.5%)};
-  --dark-mode-border-color: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
-                                   $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
-                                   $lightness: 22.5%)};
-  {% else %}
-  --dark-mode-body-bg: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
-                              $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
-                              $lightness: 17.5%)};
-  --dark-mode-border-color: #{hsl($hue: color.channel($color: {{ theme_color }}, $channel: "hue", $space: hsl), 
-                                   $saturation: color.channel($color: {{ theme_color }}, $channel: "saturation", $space: hsl) / 8, 
-                                   $lightness: 22.5%)};
-  {% endif %}
+  --dark-mode-body-bg: #{color.hsl(
+    $hue: color.hue(#ffcc00),
+    $saturation: math.div(color.saturation(#ffcc00), 8),
+    $lightness: 17.5%
+  )};
+  --dark-mode-border-color: #{color.hsl(
+    $hue: color.hue(#ffcc00),
+    $saturation: math.div(color.saturation(#ffcc00), 8),
+    $lightness: 22.5%
+  )};
 }
